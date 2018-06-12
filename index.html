@@ -104,6 +104,14 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row">
             <div class="resume-content">
+              <h5>Your Root Password</h5>
+              <p>Your device is configured with the default password for the `parrot` user as:
+              <pre>toor</pre></p>
+              <p>You should change this immediately! Learn how to <a class="js-scroll-trigger" href="#setup">here</a>.</p>
+            </div>
+          </div>
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content">
               <h5>Connecting to your Raspberry Pi</h5>
               <p>There are a few ways you can connect to your Raspberry Pi - By plugging in an external monitor, keyboard and mouse, via SSH in the command line, or through an FTP client like Filezilla or Transmit. Read on...</p>
             </div>
@@ -315,21 +323,64 @@
         <div class="my-auto">
           <h2 class="mb-5">Hosting Your Own Website</h2>
 
-          <h5>Replace this default site with your own</h5>
-          <ul class="mb-0">
-            <li>Open up a FTP client like Transmit or Filezilla.</li>
-            <li>Make an SFTP connection with these details:
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content">
+              <h5>Replace this default site with your own</h5>
               <ul>
-                <li>Server: radical-network.local</li>
-                <li>User Name: parrot</li>
-                <li>Password: toor</li>
-                <li>Initial Path: /var/www/html</li>
-                <li>Port: 22</li>
+                <li>Open up a FTP client like Transmit or Filezilla.</li>
+                <li>Make an SFTP connection with these details:
+                  <ul>
+                    <li>Server: radical-network.local</li>
+                    <li>User Name: parrot</li>
+                    <li>Password: toor</li>
+                    <li>Initial Path: /var/www/html</li>
+                    <li>Port: 22</li>
+                  </ul>
+                </li>
+                <li>If you didn't set an `Initial Path`, navigate to /var/www/html/</li>
+                <li>You are now in your "web root", the location from which your website documents will be served. You can edit index.html, add new files, or delete everything and replace it with an entirely new site.</li>
               </ul>
-            </li>
-            <li>If you didn't set an `Initial Path`, navigate to /var/www/html/</li>
-            <li>You are now in your "web root", the location from which your website documents will be served. You can edit index.html, add new files, or delete everything and replace it with an entirely new site.</li>
-          </ul>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content">
+              <h5>Change Your Hostname</h5>
+              <p>Your hostname is currently <span class="green">radical-network</span>. This is essentially the name of your device, which is automatically resolved to an IP address either in the browser window or in the command line. You can also think of it as the domain name associated with your offline webserver.</p>
+              <p>If you want to change this name to something else, it's easy. Follow these steps:</p>
+            </div>
+          </div>
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content">
+              <h5>Via <span class="light">Command Line</span></h5>
+              <ul>
+                <li>Edit the hostname file by typing at the command prompt<br/><pre>$ sudo nano /etc/hostname</pre></li>
+                <li>Change `radical-network` to any other name you prefer.</li>
+                <li>Save and close the file (ctrl-x, then Y for yes to save)</li>
+                <li>Edit the hosts file by typing at the command prompt<br/><pre>$ sudo nano /etc/hosts</pre></li>
+                <li>Use the arrow keys to move down to the line that reads<br/><pre>127.0.1.1&nbsp;&nbsp;&nbsp;radical-network</pre><br/>Change `radical-network` to whatever you specified in /etc/hostname.</li>
+                <li>Save and close the file (ctrl-x, then Y for yes to save)</li>
+                <li><pre>$ sudo reboot</pre></li>
+                <li>Done! You can now login to your RPi with<br/><pre>$ ssh parrot@&lt;your new hostname&gt;.local</pre><br/>or load your website at<br/><span class="green">http://&lt;your new hostname&gt;.local</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content">
+              <h5>Via <span class="light">Desktop</span></h5>
+              <ul>
+                <li>Go to Applications > System Tools > MATE Terminal</li>
+                  <li>Edit the hostname file by typing at the command prompt<br/><pre>$ sudo nano /etc/hostname</pre></li>
+                <li>Change `radical-network` to any other name you prefer.</li>
+                <li>Save and close the file (ctrl-x, then Y for yes to save)</li>
+                <li>Edit the hosts file by typing at the command prompt<br/><pre>$ sudo nano /etc/hosts</pre></li>
+                <li>Use the arrow keys to move down to the line that reads<br/><pre>127.0.1.1&nbsp;&nbsp;&nbsp;radical-network</pre><br/>Change `radical-network` to whatever you specified in /etc/hostname.</li>
+                <li>Save and close the file (ctrl-x, then Y for yes to save)</li>
+                <li><pre>$ sudo reboot</pre></li>
+                <li>Done! You can now login to your RPi with<br/><pre>$ ssh parrot@&lt;your new hostname&gt;.local</pre><br/>or load your website at<br/><span class="green">http://&lt;your new hostname&gt;.local</span></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 

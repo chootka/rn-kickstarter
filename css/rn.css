@@ -163,6 +163,10 @@ li.icon:first-child {
   color: #fff;
 }
 
+.green {
+  color: #28a745;
+}
+
 .attribute {
   font-size: .9em;
   font-style: italic;
