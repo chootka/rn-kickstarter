@@ -115,7 +115,7 @@
                 <li>Join the <pre>WHO'Z A GOOD BOI</pre> wireless network</li>
                 <li>Open a terminal and enter this command at the `$` prompt:
                   <ul>
-                    <li><pre>$ ssh parrot@10.80.100.2</pre></li>
+                    <li><pre>$ ssh parrot@parrot-pi.local</pre></li>
                     <li>password:<pre>toor</pre></li>
                   </ul>
                 </li>
@@ -131,7 +131,7 @@
                 <li>Open up a FTP client like Transmit or Filezilla.</li>
                 <li>Make an SFTP connection with these details:
                   <ul>
-                    <li>server: 10.80.100.2</li>
+                    <li>server: parrot-pi.local</li>
                     <li>port: 22</li>
                     <li>user: parrot</li>
                     <li>password: toor</li>
@@ -317,9 +317,18 @@
 
           <h5>Replace this default site with your own</h5>
           <ul class="mb-0">
-            <li>Follow instructions for how to connect via SFTP</li>
-            <li>Navigate to /var/www/html/</li>
-            <li>This is your web root! You can edit index.html, add new files, or delete everything and replace it with an entirely new site.</li>
+            <li>Open up a FTP client like Transmit or Filezilla.</li>
+            <li>Make an SFTP connection with these details:
+              <ul>
+                <li>Server: parrot-pi.local</li>
+                <li>User Name: parrot</li>
+                <li>Password: toor</li>
+                <li>Initial Path: /var/www/html</li>
+                <li>Port: 22</li>
+              </ul>
+            </li>
+            <li>If you didn't set an `Initial Path`, navigate to /var/www/html/</li>
+            <li>You are now in your "web root", the location from which your website documents will be served. You can edit index.html, add new files, or delete everything and replace it with an entirely new site.</li>
           </ul>
         </div>
       </section>
@@ -338,6 +347,7 @@
                 <li>nmap</li>
                 <li>macchanger</li>
                 <li>Ettercap</li>
+                <li>And many more...</li>
               </ul>
               <p>From the Parrot OS desktop, find these application in <span class="light">Applications > Parrot > Information Gathering</span> and <span class="light">Applications > Parrot > Sniffing & Spoofing</span></p>
             </div>
