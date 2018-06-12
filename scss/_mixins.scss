@@ -1,0 +1,78 @@
+// Mixins
+@font-face {
+    font-family: 'Lato Hairline';
+    font-style: normal;
+    font-weight: 100;
+    src: url(../fonts/Lato-Hairline.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/Lato-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato Light Italic';
+    font-weight: 300;
+    src: url(../fonts/Lato-LightItalic.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Lato-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato Italic';
+    font-weight: 400;
+    src: url(../fonts/Lato-Italic.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/lato-bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Lato Black';
+    font-style: normal;
+    font-weight: 900;
+    src: url(../fonts/Lato-Black.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    src: url(../fonts/Oswald-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Oswald SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: url(../fonts/Oswald-SemiBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'ShareTechMono';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/ShareTechMono-Regular.ttf) format('truetype');
+}
+
+// Bootstrap Button Variant
+@mixin background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@mixin heading-font {
+  font-family: 'Oswald', sans-serif;
+}
+@mixin subheading-font {
+  font-family: 'ShareTechMono', sans-serif;
+}
+@mixin nav-font {
+  font-family: 'Oswald', sans-serif;
+}
+@mixin body-font {
+  font-family: 'Lato Regular', sans-serif;
+}

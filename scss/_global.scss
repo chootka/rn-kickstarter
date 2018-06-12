@@ -1,0 +1,120 @@
+// Global styling for this template
+
+body {
+  @include body-font;
+  padding-top: 54px;
+  background: $off-black;
+  color: $gray-400;
+  letter-spacing: .02em !important;
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: $sidebar-base-width;
+  }
+}
+
+blockquote {
+  padding: 0 2em 1em 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include heading-font;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $gray-600;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 5.5rem;
+}
+
+h2 {
+  color: $white;
+  font-family: 'Lato Regular', sans-serif;
+  font-size: 3.25rem;
+}
+
+h3 {
+  padding-top: 2em;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+pre {
+  color: $green;
+  display: inline;
+  margin: 0 .5em;
+}
+
+li {
+  margin: .075em 0;
+  position: relative;
+}
+
+li.icon {
+  list-style: none;
+  display: inline;
+  margin: 1.5em;
+}
+
+li.icon:first-child {
+  margin-left: -8px;
+}
+
+@media (max-width: 768px) {
+  li.icon {
+    display: block;
+    margin-left: -8px;
+  }
+}
+
+.header img {
+  max-width: 543px;
+  width: 100%;
+}
+
+.header + h5 {
+  padding-top: 1em;
+}
+
+.subheading {
+  @include subheading-font;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+.ssid {
+  color: $white;
+}
+
+.attribute {
+  font-size: .9em;
+  font-style: italic;
+}
+
+.connected {
+  color: darken($teal, 5%);
+}
+
+.light {
+  color: $white;
+}
+
+.list-icons {
+  font-size: 3rem;
+  .list-inline-item i {
+    &:hover {
+      color: $primary;
+    }
+  }
+}
