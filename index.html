@@ -246,15 +246,15 @@
           <div class="resume-item d-flex flex-md-row">
             <div class="resume-content">
               <h3 class="mb-0">Changing Your Network Name (SSID)</h3>
-              <p>After you've connected to your RPi, the first thing to do is to change the default password to something secure.</p>
+              <p>Changing your wireless network name is easy and even fun!</p>
             </div>
           </div>
           <div class="resume-item d-flex flex-column flex-md-row">
             <div class="resume-content">
               <h5>Via <span class="light">Command Line</span></h5>
               <ul>
-                <li><pre>$ sudo nano /etc/hostapd/hostapd.conf</pre></li>
-                <li>Use the arrow key to move down to the `ssid` line. Change what comes after the `=` sign. Your wireless network can be up to 32 characters long.</li>
+                <li><pre>$ sudo nano /etc/ssid.config</pre></li>
+                <li>Use the arrow key to move down to the `SSID` line. Change what comes after the `=` sign. Your wireless network can be up to 32 characters long.</li>
                 <li><pre>$ sudo reboot</pre></li>
                 <li>Done!</li>
               </ul>
@@ -265,8 +265,8 @@
               <h5>Via <span class="light">Desktop</span></h5>
               <ul>
                 <li>Go to Applications > System Tools > MATE Terminal</li>
-                <li><pre>$ sudo nano /etc/hostapd/hostapd.conf</pre></li>
-                <li>Use the arrow key to move down to the `ssid` line. Change what comes after the `=` sign. Your wireless network can be up to 32 characters long.</li>
+                <li><pre>$ sudo nano /etc/ssid.config</pre></li>
+                <li>Use the arrow key to move down to the `SSID` line. Change what comes after the `=` sign. Your wireless network can be up to 32 characters long.</li>
                 <li><pre>$ sudo reboot</pre></li>
                 <li>Done!</li>
               </ul>
@@ -276,7 +276,7 @@
           <div class="resume-item d-flex flex-md-row">
             <div class="resume-content">
               <h3 class="mb-0">Adding a password to your wireless network</h3>
-              <p>After you've connected to your RPi, the first thing to do is to change the default password to something secure.</p>
+              <p>Your WiFi network is open by default, but you can set a password to secure it by adding a few lines to a configuration script.</p>
             </div>
           </div>
           <div class="resume-item d-flex flex-column flex-md-row">
@@ -325,7 +325,7 @@
 
           <div class="resume-item d-flex flex-column flex-md-row">
             <div class="resume-content">
-              <h5>Replace this default site with your own</h5>
+              <h5>Host your own HTML files in place of this informational site in a few steps.</h5>
               <ul>
                 <li>Open up a FTP client like Transmit or Filezilla.</li>
                 <li>Make an SFTP connection with these details:
@@ -337,7 +337,7 @@
                     <li>Port: 22</li>
                   </ul>
                 </li>
-                <li>If you didn't set an `Initial Path`, navigate to /var/www/html/</li>
+                <li>If you didn't set the initial path, navigate to /var/www/html/</li>
                 <li>You are now in your "web root", the location from which your website documents will be served. You can edit index.html, add new files, or delete everything and replace it with an entirely new site.</li>
               </ul>
             </div>
@@ -355,10 +355,10 @@
               <h5>Via <span class="light">Command Line</span></h5>
               <ul>
                 <li>Edit the hostname file by typing at the command prompt<br/><pre>$ sudo nano /etc/hostname</pre></li>
-                <li>Change `radical-network` to any other name you prefer.</li>
+                <li>Change <span class="green">radical-network</span> to any other name you prefer.</li>
                 <li>Save and close the file (ctrl-x, then Y for yes to save)</li>
                 <li>Edit the hosts file by typing at the command prompt<br/><pre>$ sudo nano /etc/hosts</pre></li>
-                <li>Use the arrow keys to move down to the line that reads<br/><pre>127.0.1.1&nbsp;&nbsp;&nbsp;radical-network</pre><br/>Change `radical-network` to whatever you specified in /etc/hostname.</li>
+                <li>Use the arrow keys to move down to the line that reads<br/><pre>127.0.1.1&nbsp;&nbsp;&nbsp;radical-network</pre><br/>Change <span class="green">radical-network</span> to whatever you specified in /etc/hostname.</li>
                 <li>Save and close the file (ctrl-x, then Y for yes to save)</li>
                 <li><pre>$ sudo reboot</pre></li>
                 <li>Done! You can now login to your RPi with<br/><pre>$ ssh parrot@&lt;your new hostname&gt;.local</pre><br/>or load your website at<br/><span class="green">http://&lt;your new hostname&gt;.local</span></li>
@@ -371,10 +371,10 @@
               <ul>
                 <li>Go to Applications > System Tools > MATE Terminal</li>
                   <li>Edit the hostname file by typing at the command prompt<br/><pre>$ sudo nano /etc/hostname</pre></li>
-                <li>Change `radical-network` to any other name you prefer.</li>
+                <li>Change <span class="green">radical-network</span> to any other name you prefer.</li>
                 <li>Save and close the file (ctrl-x, then Y for yes to save)</li>
                 <li>Edit the hosts file by typing at the command prompt<br/><pre>$ sudo nano /etc/hosts</pre></li>
-                <li>Use the arrow keys to move down to the line that reads<br/><pre>127.0.1.1&nbsp;&nbsp;&nbsp;radical-network</pre><br/>Change `radical-network` to whatever you specified in /etc/hostname.</li>
+                <li>Use the arrow keys to move down to the line that reads<br/><pre>127.0.1.1&nbsp;&nbsp;&nbsp;radical-network</pre><br/>Change <span class="green">radical-network</span> to whatever you specified in /etc/hostname.</li>
                 <li>Save and close the file (ctrl-x, then Y for yes to save)</li>
                 <li><pre>$ sudo reboot</pre></li>
                 <li>Done! You can now login to your RPi with<br/><pre>$ ssh parrot@&lt;your new hostname&gt;.local</pre><br/>or load your website at<br/><span class="green">http://&lt;your new hostname&gt;.local</span></li>
